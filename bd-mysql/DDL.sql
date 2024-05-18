@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `blog`.`Posts` (
   CONSTRAINT `fk_Books_Authors`
     FOREIGN KEY (`Authors_id`)
     REFERENCES `blog`.`Authors` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
