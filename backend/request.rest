@@ -1,0 +1,26 @@
+@PORT = 3124
+@HOST = http://localhost:{{PORT}}
+GET  {{HOST}}/api/authors
+###
+GET  {{HOST}}/api/posts
+###
+POST {{HOST}}/api/authors
+Content-Type: application/json
+
+{
+    "nombre":   "Pepe",
+    "email":    "pepe2@email.es",
+    "imagen":   null
+}
+###
+POST {{HOST}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo":       "post_x",
+    "descripcion":  "desc_post_x",
+    "categoria":    "categoria_x",
+    "author_id":    5
+}
+###
+GET  {{HOST}}/api/posts/author/3
